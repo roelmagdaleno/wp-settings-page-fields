@@ -152,4 +152,25 @@ abstract class Element {
 	public function name() : string {
 		return $this->section . '[' . $this->id . ']';
 	}
+
+	/**
+	 * Get the `<input />` description.
+	 *
+	 * @since  0.1.0
+	 *
+	 * @return string   The `<input />` description.
+	 */
+	public function description() : string {
+		if ( ! isset( $this->settings['description'] ) ) {
+			return '';
+		}
+
+		$id = str_replace( '_', '-', $this->id() ) . '-description';
+
+		$description  = '<p class="description" id="' . esc_attr( $id ) . '">';
+		$description .= $this->settings['description'];
+		$description .= '</p>';
+
+		return $description;
+	}
 }

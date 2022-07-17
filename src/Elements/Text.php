@@ -21,12 +21,7 @@ class Text extends Element {
 			$html .= '<span class="spinner"></span>';
 		}
 
-		if ( isset( $this->settings['description'] ) ) {
-			$id    = str_replace( '_', '-', $this->id() ) . '-description';
-			$html .= '<p class="description" id="' . esc_attr( $id ) . '">';
-			$html .= $this->settings['description'];
-			$html .= '</p>';
-		}
+		$html .= $this->description();
 
 		return $html;
 	}
