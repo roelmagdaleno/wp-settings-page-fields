@@ -22,7 +22,10 @@ class Text extends Element {
 		}
 
 		if ( isset( $this->settings['description'] ) ) {
-			$html .= '<p class="description">' . $this->settings['description'] . '</p>';
+			$id    = str_replace( '_', '-', $this->id() ) . '-description';
+			$html .= '<p class="description" id="' . esc_attr( $id ) . '">';
+			$html .= $this->settings['description'];
+			$html .= '</p>';
 		}
 
 		return $html;

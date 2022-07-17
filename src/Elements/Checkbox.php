@@ -13,14 +13,15 @@ class Checkbox extends Element {
 	 * @return string   The HTML component.
 	 */
 	public function render() : string {
-		$value = $this->value();
+		$id = esc_attr( $this->id() );
 
-		$html  = '<label for="' . esc_attr( $this->id() ) . '">';
-		$html .= '<input type="checkbox" id="' . esc_attr( $this->id() ) . '" ';
+		$html  = '<fieldset>';
+		$html .= '<label for="' . $id . '">';
+		$html .= '<input type="checkbox" id="' . $id . '" ';
 		$html .= 'name="' . esc_attr( $this->name() ) . '" value="1" ';
-		$html .= checked( '1', $value, false ) . ' />';
+		$html .= checked( '1', $this->value(), false ) . ' />';
 		$html .= $this->settings['description'] ?? '';
-		$html .= '</label>';
+		$html .= '</label></fieldset>';
 
 		return $html;
 	}
