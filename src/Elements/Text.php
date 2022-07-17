@@ -13,9 +13,9 @@ class Text extends Element {
 	 * @return string   The HTML component.
 	 */
 	public function render() : string {
-		$html  = '<input type="text" id="' . $this->id() . '" ';
-		$html .= 'name="' . $this->name() . '" value="' . $this->value() . '" ';
-		$html .= 'class="regular-text" placeholder="' . $this->placeholder() . '" />';
+		$html  = '<input type="text" id="' . esc_attr( $this->id() ) . '" ';
+		$html .= 'name="' . esc_attr( $this->name() ) . '" value="' . esc_attr( $this->value() ) . '" ';
+		$html .= 'class="regular-text" placeholder="' . esc_attr( $this->placeholder() ) . '" />';
 
 		if ( isset( $this->settings['spinner'] ) ) {
 			$html .= '<span class="spinner"></span>';

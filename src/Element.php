@@ -115,6 +115,10 @@ abstract class Element {
 	 * @return mixed   The value for the current input.
 	 */
 	public function value() {
+		if ( ! function_exists( 'get_option' ) ) {
+			return false;
+		}
+
 		$settings = get_option( $this->section, array() );
 
 		if ( empty( $settings ) ) {
