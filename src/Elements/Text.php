@@ -8,7 +8,7 @@ class Text extends Element {
 	/**
 	 * Render the HTML component.
 	 *
-	 * @since  0.8.0
+	 * @since  0.1.0
 	 *
 	 * @return string   The HTML component.
 	 */
