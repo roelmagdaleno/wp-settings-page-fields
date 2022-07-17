@@ -1,5 +1,6 @@
 {
     "name": "roelmagdaleno/wp-form-elements",
+    "description": "A package to render form elements in WordPress.",
     "version": "0.1.0",
     "license": "MIT",
     "autoload": {
