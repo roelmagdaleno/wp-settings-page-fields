@@ -1,0 +1,29 @@
+{
+    "name": "roelmagdaleno/wp-form-elements",
+    "version": "0.1.0",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Roel\\WPFormElements\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Roel\\WPFormElements\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Roel Magdaleno",
+            "email": "roelmagdaleno@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "pestphp/pest": "^1.21"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
