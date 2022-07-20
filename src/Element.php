@@ -67,9 +67,6 @@ abstract class Element {
 	/**
 	 * Render the specified attributes into the HTML component.
 	 *
-	 * We only accept some attributes like "onclick", "onchange", etc.
-	 * Check the "$valid_attrs" variable to see which attributes are valid.
-	 *
 	 * @since  0.1.0
 	 *
 	 * @param  array   $attributes   The attributes to render to the current element.
@@ -93,9 +90,6 @@ abstract class Element {
 
 	/**
 	 * Get the value for the current input.
-	 *
-	 * If there's an "alteration" the value will be parsed according
-	 * to the current value. There's only one alteration for now: "protect_string".
 	 *
 	 * @since  0.1.0
 	 *
