@@ -67,6 +67,16 @@ abstract class Element {
 	}
 
 	/**
+	 * Print the HTML element.
+	 * Useful when you have to print the HTML element right away.
+	 *
+	 * @since 0.1.0
+	 */
+	public function print() {
+		echo $this->render();
+	}
+
+	/**
 	 * Render the specified attributes into the HTML element.
 	 *
 	 * @since  0.1.0
