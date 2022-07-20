@@ -26,6 +26,24 @@ class Radio extends Element {
 		$html .= $this->description();
 		$html .= '</fieldset>';
 
-		return $html;
+		/**
+		 * Change the HTML output the element.
+		 *
+		 * @since 0.1.0
+		 *
+		 * @param string   $html       The HTML output.
+		 * @param array    $settings   The element settings.
+		 */
+		$html = apply_filters( 'wp_radio_element', $html, $this->settings );
+
+		/**
+		 * Change the HTML output for a specific element.
+		 *
+		 * @since 0.1.0
+		 *
+		 * @param string   $html       The HTML output.
+		 * @param array    $settings   The element settings.
+		 */
+		return apply_filters( "wp_{$this->id()}_radio_element", $html, $this->settings );
 	}
 }

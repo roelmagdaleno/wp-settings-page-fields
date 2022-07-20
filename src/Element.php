@@ -38,8 +38,8 @@ abstract class Element {
 	 * @param string   $id         The component id.
 	 * @param array    $settings   The component settings.
 	 */
-	public function __construct(string $id = '', array $settings = array()) {
-		$this->id = $id;
+	public function __construct( string $id = '', array $settings = array() ) {
+		$this->id       = $id;
 		$this->settings = $settings;
 	}
 
@@ -138,7 +138,7 @@ abstract class Element {
 	 */
 	public function name() : string {
 		$name = $this->option_name . '[' . $this->id . ']';
-		return apply_filters( "wp_{$this->id}_element", $name );
+		return apply_filters( "wp_{$this->id}_name_attribute", $name );
 	}
 
 	/**
@@ -159,6 +159,22 @@ abstract class Element {
 		$description .= $this->settings['description'];
 		$description .= '</p>';
 
-		return $description;
+		/**
+		 * Change the element description.
+		 *
+		 * @since 0.1.0
+		 *
+		 * @param string   $description   The element description.
+		 */
+		$description = apply_filters( 'wp_element_description', $description );
+
+		/**
+		 * Change the specific element description.
+		 *
+		 * @since 0.1.0
+		 *
+		 * @param string   $description   The element description.
+		 */
+		return apply_filters( "wp_{$this->id}_description", $description );
 	}
 }
