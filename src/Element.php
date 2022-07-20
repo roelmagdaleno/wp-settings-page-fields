@@ -125,6 +125,17 @@ abstract class Element {
 	}
 
 	/**
+	 * Get the label for current element.
+	 *
+	 * @since  0.1.0
+	 *
+	 * @return string   The label for current element.
+	 */
+	public function label() : string {
+		return $this->settings['label'] ?? '';
+	}
+
+	/**
 	 * Get the input name.
 	 * The generated input name will be constructed from the option name and id.
 	 *
