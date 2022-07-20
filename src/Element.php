@@ -4,40 +4,40 @@ namespace Roel\WP\Settings;
 
 abstract class Element {
 	/**
-	 * The component id.
+	 * The element id.
 	 *
 	 * @since 0.1.0
 	 *
-	 * @var   string   $id   The component id.
+	 * @var   string   $id   The element id.
 	 */
 	private string $id;
 
 	/**
-	 * The component option name.
+	 * The element option name.
 	 *
 	 * @since 0.1.0
 	 *
-	 * @var   string   $option_name   The component option name.
+	 * @var   string   $option_name   The element option name.
 	 */
 	public string $option_name;
 
 	/**
-	 * The component settings.
+	 * The element settings.
 	 *
 	 * @since 0.1.0
 	 *
-	 * @var   array   $settings   The component settings.
+	 * @var   array   $settings   The element settings.
 	 */
 	public array $settings;
 
 	/**
-	 * Initialize the properties to render the component.
+	 * Initialize the properties to render the element.
 	 *
 	 * @since 0.1.0
 	 *
 	 * @param string   $id            The element id.
 	 * @param string   $option_name   The element option name.
-	 * @param array    $settings      The component settings.
+	 * @param array    $settings      The element settings.
 	 */
 	public function __construct( string $id = '', string $option_name = '', array $settings = array() ) {
 		$this->id          = $id;
@@ -46,33 +46,33 @@ abstract class Element {
 	}
 
 	/**
-	 * Render the HTML component.
+	 * Render the HTML element.
 	 * This method must be declared in every class where this class is extended.
 	 *
 	 * @since  0.1.0
 	 *
-	 * @return string   The HTML component.
+	 * @return string   The HTML element.
 	 */
 	abstract public function render() : string;
 
 	/**
-	 * Return the HTML component when echo the instance.
+	 * Return the HTML element when echo the instance.
 	 *
 	 * @since  0.1.0
 	 *
-	 * @return string   Return the HTML component when echo the instance.
+	 * @return string   Return the HTML element when echo the instance.
 	 */
 	public function __toString() : string {
 		return $this->render();
 	}
 
 	/**
-	 * Render the specified attributes into the HTML component.
+	 * Render the specified attributes into the HTML element.
 	 *
 	 * @since  0.1.0
 	 *
 	 * @param  array   $attributes   The attributes to render to the current element.
-	 * @return string                The component attributes.
+	 * @return string                The element attributes.
 	 */
 	public function attributes( array $attributes = array() ) : string {
 		$el_attributes = empty( $attributes ) ? $this->settings['attributes'] ?? array() : $attributes;
