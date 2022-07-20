@@ -1,8 +1,8 @@
 <?php
 
-namespace Roel\WPFormElements\Elements;
+namespace Roel\WP\Settings\Elements;
 
-use Roel\WPFormElements\Element;
+use Roel\WP\Settings\Element;
 
 class Radio extends Element {
 	/**

@@ -1,6 +1,6 @@
 <?php
 
-namespace Roel\WPFormElements;
+namespace Roel\WP\Settings;
 
 abstract class Element {
 	/**
