@@ -46,16 +46,6 @@ abstract class Element {
 	}
 
 	/**
-	 * Render the HTML element.
-	 * This method must be declared in every class where this class is extended.
-	 *
-	 * @since  0.1.0
-	 *
-	 * @return string   The HTML element.
-	 */
-	abstract public function render() : string;
-
-	/**
 	 * Return the HTML element when echo the instance.
 	 *
 	 * @since  0.1.0
@@ -65,6 +55,16 @@ abstract class Element {
 	public function __toString() : string {
 		return $this->render();
 	}
+
+	/**
+	 * Render the HTML element.
+	 * This method must be declared in every class where this class is extended.
+	 *
+	 * @since  0.1.0
+	 *
+	 * @return string   The HTML element.
+	 */
+	abstract public function render() : string;
 
 	/**
 	 * Print the HTML element.
