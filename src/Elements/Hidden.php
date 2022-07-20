@@ -15,7 +15,7 @@ class Hidden extends Element {
 	public function render() : string {
 		$html  = '<input type="hidden" id="' . esc_attr( $this->id() ) . '" ';
 		$html .= 'name="' . esc_attr( $this->name() ) . '" value="' . esc_attr( $this->value() ) . '" ';
-		$html .= $this->attributes() . ' />';
+		$html .= $this->attributes() . '/>';
 
 		/**
 		 * Change the HTML output the element.

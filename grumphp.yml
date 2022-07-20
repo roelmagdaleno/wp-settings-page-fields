@@ -1,0 +1,35 @@
+grumphp:
+  tasks:
+    phpcs:
+      standard:
+        - phpcs.xml
+        - phpcompat.xml
+      ignore_patterns: [
+        ".cache",
+        ".github",
+        ".idea",
+        "admin",
+        "assets",
+        "bin",
+        "node_modules",
+        "tests",
+        "vendor"
+      ]
+
+    phpmd:
+      exclude: [
+        ".github",
+        ".idea",
+        "admin",
+        "assets",
+        "bin",
+        "node_modules",
+        "tests",
+        "vendor"
+      ]
+      ruleset: [
+        "codesize",
+        "design",
+        "unusedcode",
+        "naming"
+      ]

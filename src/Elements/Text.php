@@ -16,7 +16,7 @@ class Text extends Element {
 		$html  = '<input type="text" id="' . esc_attr( $this->id() ) . '" ';
 		$html .= 'name="' . esc_attr( $this->name() ) . '" value="' . esc_attr( $this->value() ) . '" ';
 		$html .= 'class="regular-text" placeholder="' . esc_attr( $this->placeholder() ) . '" ';
-		$html .= $this->attributes() . ' />';
+		$html .= $this->attributes() . '/>';
 
 		if ( isset( $this->settings['spinner'] ) ) {
 			$html .= '<span class="spinner"></span>';

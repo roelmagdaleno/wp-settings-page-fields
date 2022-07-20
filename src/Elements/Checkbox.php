@@ -4,6 +4,9 @@ namespace Roel\WP\Settings\Elements;
 
 use Roel\WP\Settings\Element;
 
+/**
+ * @SuppressWarnings(PHPMD.ShortVariable)
+ */
 class Checkbox extends Element {
 	/**
 	 * Render the HTML component.

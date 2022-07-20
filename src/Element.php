@@ -2,6 +2,10 @@
 
 namespace Roel\WP\Settings;
 
+/**
+ * @SuppressWarnings(PHPMD.ShortMethodName)
+ * @SuppressWarnings(PHPMD.ShortVariable)
+ */
 abstract class Element {
 	/**
 	 * The element id.
@@ -127,8 +131,6 @@ abstract class Element {
 	 * @since  0.1.0
 	 *
 	 * @return string   The input id.
-	 *
-	 * @SuppressWarnings(PHPMD.ShortMethodName)
 	 */
 	public function id() : string {
 		return $this->id;

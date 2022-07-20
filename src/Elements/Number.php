@@ -15,7 +15,7 @@ class Number extends Element {
 	public function render() : string {
 		$html  = '<input type="number" id="' . esc_attr( $this->id() ) . '" ';
 		$html .= 'name="' . esc_attr( $this->name() ) . '" value="' . esc_attr( $this->value() ) . '" ';
-		$html .= 'class="small-text" ' . $this->attributes() . ' />';
+		$html .= 'class="small-text" ' . $this->attributes() . '/>';
 
 		if ( isset( $this->settings['right-text'] ) ) {
 			$html .= $this->settings['right-text'];
