@@ -16,7 +16,7 @@ class TextArea extends Element {
 		$html  = '<textarea rows="' . esc_attr( $this->settings['rows'] ?? 10 ) . '" ';
 		$html .= 'cols="' . esc_attr( $this->settings['cols'] ?? 50 ) . '" id="' . esc_attr( $this->id() ) . '" ';
 		$html .= 'name="' . esc_attr( $this->name() ) . '" class="large-text code" ';
-		$html .= 'placeholder="' . $this->placeholder() . '">';
+		$html .= 'placeholder="' . $this->placeholder() . '" ' . $this->attributes() . '>';
 		$html .= $this->value() . '</textarea>';
 
 		$html .= $this->description();

@@ -79,25 +79,9 @@ abstract class Element {
 			return '';
 		}
 
-		$attributes  = '';
-		$valid_attrs = array(
-			'onclick',
-			'onchange',
-			'oninput',
-			'disabled',
-			'class',
-			'style',
-		);
+		$attributes = '';
 
 		foreach ( $this->settings['attributes'] as $attribute => $value ) {
-			if ( ! in_array( $attribute, $valid_attrs, true ) && false === strpos( $attribute, 'data-' ) ) {
-				continue;
-			}
-
-			if ( 'disabled' === $attribute && ! $value ) {
-				continue;
-			}
-
 			$attributes .= ' ' . esc_attr( $attribute ) . '="' . esc_attr( $value ) . '"';
 		}
 

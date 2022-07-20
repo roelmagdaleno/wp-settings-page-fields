@@ -19,7 +19,7 @@ class Checkbox extends Element {
 		$html .= '<label for="' . $id . '">';
 		$html .= '<input type="checkbox" id="' . $id . '" ';
 		$html .= 'name="' . esc_attr( $this->name() ) . '" value="1" ';
-		$html .= checked( '1', $this->value(), false ) . ' />';
+		$html .= checked( '1', $this->value(), false ) . $this->attributes() . ' />';
 		$html .= $this->description();
 		$html .= '</label></fieldset>';
 
