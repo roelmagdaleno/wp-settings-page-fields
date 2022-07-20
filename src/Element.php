@@ -39,8 +39,9 @@ abstract class Element {
 	 * @param array    $settings   The component settings.
 	 */
 	public function __construct( string $id = '', array $settings = array() ) {
-		$this->id       = $id;
-		$this->settings = $settings;
+		$this->id          = $id;
+		$this->settings    = $settings;
+		$this->option_name = $settings['option_name'] ?? '';
 	}
 
 	/**
