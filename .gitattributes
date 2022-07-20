@@ -1,0 +1,8 @@
+/bin                export-ignore
+/tests              export-ignore
+/.gitignore         export-ignore
+/.gitattributes     export-ignore
+/grumphp.yml        export-ignore
+/phpcompat.xml      export-ignore
+/phpcs.xml          export-ignore
+/phpunit.xml.dist   export-ignore
