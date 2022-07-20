@@ -13,14 +13,14 @@ class Radio extends Element {
 	 * @return string   The HTML component.
 	 */
 	public function render() : string {
-		$html = '<fieldset>';
+		$html = '<fieldset ' . $this->attributes() . '>';
 
-		foreach ( $this->settings['options'] as $value => $option ) {
+		foreach ( $this->settings['options'] as $value => $input ) {
 			$html .= '<p> <label>';
 			$html .= '<input type="radio" id="' . esc_attr( $value ) . '" ';
 			$html .= 'name="' . esc_attr( $this->name() ) . '" value="' . esc_attr( $value ) . '" ';
-			$html .= checked( $value, $this->value(), false ) . '/>' . $option['label'];
-			$html .= '</p> </label>';
+			$html .= checked( $value, $this->value(), false ) . $this->attributes( $input['attributes'] ) . '/>';
+			$html .= $input['label'] . '</p> </label>';
 		}
 
 		$html .= $this->description();

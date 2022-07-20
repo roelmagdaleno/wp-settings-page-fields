@@ -20,11 +20,12 @@ class Select extends Element {
 		$html  = '<select id="' . esc_attr( $this->id() ) . '" ';
 		$html .= 'name="' . esc_attr( $this->name() ) . '" ' . $this->attributes() . '>';
 
-		foreach ( $this->settings['options'] as $value => $label ) {
+		foreach ( $this->settings['options'] as $value => $option ) {
 			$is_selected = selected( $this->value(), $value, false );
 
-			$html .= '<option value="' . esc_attr( $value ) . '" ' . $is_selected . ' >';
-			$html .= $label . '</option>';
+			$html .= '<option value="' . esc_attr( $value ) . '" ' . $is_selected;
+			$html .= $this->attributes( $option['attributes'] ) . '>';
+			$html .= $option['label'] . '</option>';
 		}
 
 		$html .= '</select>';

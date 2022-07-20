@@ -72,17 +72,20 @@ abstract class Element {
 	 *
 	 * @since  0.1.0
 	 *
-	 * @return string   The component attributes.
+	 * @param  array   $attributes   The attributes to render to the current element.
+	 * @return string                The component attributes.
 	 */
-	public function attributes() : string {
-		if ( ! isset( $this->settings['attributes'] ) || empty( $this->settings['attributes'] ) ) {
+	public function attributes( array $attributes = array() ) : string {
+		$el_attributes = empty( $attributes ) ? $this->settings['attributes'] ?? array() : $attributes;
+
+		if ( empty( $el_attributes ) ) {
 			return '';
 		}
 
 		$attributes = '';
 
-		foreach ( $this->settings['attributes'] as $attribute => $value ) {
-			$attributes .= ' ' . esc_attr( $attribute ) . '="' . esc_attr( $value ) . '"';
+		foreach ( $el_attributes as $attribute => $value ) {
+			$attributes .= ' ' . esc_attr( $attribute ) . '="' . esc_attr( $value ) . '" ';
 		}
 
 		return $attributes;
