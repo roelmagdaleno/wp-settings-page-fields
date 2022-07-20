@@ -24,7 +24,7 @@ class Select extends Element {
 			$is_selected = selected( $this->value(), $value, false );
 
 			$html .= '<option value="' . esc_attr( $value ) . '" ' . $is_selected;
-			$html .= $this->attributes( $option['attributes'] ) . '>';
+			$html .= $this->attributes( $option['attributes'] ?? array() ) . '>';
 			$html .= $option['label'] . '</option>';
 		}
 

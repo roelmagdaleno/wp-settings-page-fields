@@ -19,7 +19,7 @@ class Radio extends Element {
 			$html .= '<p> <label>';
 			$html .= '<input type="radio" id="' . esc_attr( $value ) . '" ';
 			$html .= 'name="' . esc_attr( $this->name() ) . '" value="' . esc_attr( $value ) . '" ';
-			$html .= checked( $value, $this->value(), false ) . $this->attributes( $input['attributes'] ) . '/>';
+			$html .= checked( $value, $this->value(), false ) . $this->attributes( $input['attributes'] ?? array() ) . '/>';
 			$html .= $input['label'] . '</p> </label>';
 		}
 
