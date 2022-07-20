@@ -36,10 +36,10 @@ abstract class Element {
 	 * @since 0.1.0
 	 *
 	 * @param string   $id            The element id.
-	 * @param string   $option_name   The element option name.
 	 * @param array    $settings      The element settings.
+	 * @param string   $option_name   The element option name.
 	 */
-	public function __construct( string $id = '', string $option_name = '', array $settings = array() ) {
+	public function __construct( string $id = '', array $settings = array(), string $option_name = '' ) {
 		$this->id          = $id;
 		$this->settings    = $settings;
 		$this->option_name = $option_name;
