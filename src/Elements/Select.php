@@ -6,11 +6,11 @@ use Roel\WP\Settings\Element;
 
 class Select extends Element {
 	/**
-	 * Render the HTML component.
+	 * Render the HTML element.
 	 *
 	 * @since  0.1.0
 	 *
-	 * @return string   The HTML component.
+	 * @return string   The HTML element.
 	 */
 	public function render() : string {
 		if ( empty( $this->settings['options'] ) ) {

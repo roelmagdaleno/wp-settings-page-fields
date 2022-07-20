@@ -9,11 +9,11 @@ use Roel\WP\Settings\Element;
  */
 class Checkbox extends Element {
 	/**
-	 * Render the HTML component.
+	 * Render the HTML element.
 	 *
 	 * @since  0.1.0
 	 *
-	 * @return string   The HTML component.
+	 * @return string   The HTML element.
 	 */
 	public function render() : string {
 		$id = esc_attr( $this->id() );

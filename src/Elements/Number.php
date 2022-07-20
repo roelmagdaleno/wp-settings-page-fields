@@ -6,11 +6,11 @@ use Roel\WP\Settings\Element;
 
 class Number extends Element {
 	/**
-	 * Render the HTML component.
+	 * Render the HTML element.
 	 *
 	 * @since  0.8.0
 	 *
-	 * @return string   The HTML component.
+	 * @return string   The HTML element.
 	 */
 	public function render() : string {
 		$html  = '<input type="number" id="' . esc_attr( $this->id() ) . '" ';
