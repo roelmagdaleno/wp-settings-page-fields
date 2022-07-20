@@ -13,13 +13,13 @@ abstract class Element {
 	private string $id;
 
 	/**
-	 * The component section.
+	 * The component option name.
 	 *
 	 * @since 0.1.0
 	 *
-	 * @var   string   $section   The component section.
+	 * @var   string   $option_name   The component option name.
 	 */
-	public string $section;
+	public string $option_name;
 
 	/**
 	 * The component settings.
@@ -119,7 +119,7 @@ abstract class Element {
 			return false;
 		}
 
-		$settings = get_option( $this->section, array() );
+		$settings = get_option( $this->option_name, array() );
 
 		if ( empty( $settings ) ) {
 			return false;
@@ -143,14 +143,15 @@ abstract class Element {
 
 	/**
 	 * Get the input name.
-	 * The generated input name will be constructed from the section and id.
+	 * The generated input name will be constructed from the option name and id.
 	 *
 	 * @since  0.1.0
 	 *
 	 * @return string   The input name.
 	 */
 	public function name() : string {
-		return $this->section . '[' . $this->id . ']';
+		$name = $this->option_name . '[' . $this->id . ']';
+		return apply_filters( "wp_{$this->id}_element", $name );
 	}
 
 	/**
