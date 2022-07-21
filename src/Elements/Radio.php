@@ -9,6 +9,7 @@ class Radio extends Element {
 	 * Render the HTML element.
 	 *
 	 * @since  0.1.0
+	 * @since  0.1.1   Change the attribute "options" to "inputs".
 	 *
 	 * @return string   The HTML element.
 	 */
