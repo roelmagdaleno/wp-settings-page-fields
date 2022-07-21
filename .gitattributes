@@ -6,3 +6,4 @@
 /phpcompat.xml      export-ignore
 /phpcs.xml          export-ignore
 /phpunit.xml.dist   export-ignore
+/README.md          export-ignore

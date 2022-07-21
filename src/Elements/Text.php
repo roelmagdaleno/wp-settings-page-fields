@@ -25,7 +25,7 @@ class Text extends Element {
 		$html .= $this->description();
 
 		/**
-		 * Change the HTML output the element.
+		 * Change the HTML output.
 		 *
 		 * @since 0.1.0
 		 *

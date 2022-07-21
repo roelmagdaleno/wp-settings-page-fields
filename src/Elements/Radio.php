@@ -15,7 +15,7 @@ class Radio extends Element {
 	public function render() : string {
 		$html = '<fieldset ' . $this->attributes() . '>';
 
-		foreach ( $this->settings['options'] as $value => $input ) {
+		foreach ( $this->settings['inputs'] as $value => $input ) {
 			$html .= '<p> <label>';
 			$html .= '<input type="radio" id="' . esc_attr( $value ) . '" ';
 			$html .= 'name="' . esc_attr( $this->name() ) . '" value="' . esc_attr( $value ) . '" ';
@@ -27,7 +27,7 @@ class Radio extends Element {
 		$html .= '</fieldset>';
 
 		/**
-		 * Change the HTML output the element.
+		 * Change the HTML output.
 		 *
 		 * @since 0.1.0
 		 *
