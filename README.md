@@ -68,7 +68,7 @@ Remember to add the `array( $setting, 'print' )` as a callback to render the set
 ### Render
 This is how you can create a form element instance and render the HTML:
 
-#### Using the `render` method:
+#### Using the `render` method
 
 ```php
 <?php
@@ -85,7 +85,7 @@ $text = new Text( 'api-key', $settings, 'rmr_settings' );
 echo $text->render();
 ```
 
-#### Using the `print` method:
+#### Using the `print` method
 
 ```php
 <?php
@@ -102,7 +102,7 @@ $text = new Text( 'api-key', $settings, 'rmr_settings' );
 $text->print();
 ```
 
-#### Using `echo` directly to the instantiated class:
+#### Using `echo` directly to the instantiated class
 
 ```php
 <?php
