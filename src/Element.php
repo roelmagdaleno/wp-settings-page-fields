@@ -118,6 +118,18 @@ abstract class Element {
 
 		$settings = get_option( $this->option_name, array() );
 
+		/**
+		 * Filter the settings before returning the value.
+		 * This filter is useful when you want to modify the settings before returning the value.
+		 *
+		 * @since 0.1.3
+		 *
+		 * @param array $settings The settings to be returned.
+		 * @param string $id The element id.
+		 * @param string $option_name The element option name.
+		 */
+		$settings = apply_filters( 'before_returning_settings', $settings, $this->id, $this->option_name );
+
 		if ( empty( $settings ) ) {
 			return false;
 		}

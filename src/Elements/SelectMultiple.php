@@ -22,7 +22,7 @@ class SelectMultiple extends Element {
 		$html  .= 'name="' . esc_attr( $this->name() . '[]' ) . '" multiple ' . $this->attributes() . '>';
 
 		foreach ( $this->settings['options'] as $value => $option ) {
-			$is_selected = in_array( $value, $values, true ) ? 'selected' : '';
+			$is_selected = is_array( $values ) && in_array( $value, $values, true ) ? 'selected' : '';
 
 			$html .= '<option value="' . esc_attr( $value ) . '" ' . $is_selected;
 			$html .= $this->attributes( $option['attributes'] ?? array() ) . '>';
