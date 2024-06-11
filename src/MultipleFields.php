@@ -67,7 +67,7 @@ class MultipleFields {
 
 			$rendered_field = $field->render();
 			$rendered_field = str_replace( array( '<fieldset>', '</fieldset>' ), '', $rendered_field );
-			$html          .= '<p>' . $rendered_field . '</p>';
+			$html          .= '<div>' . $rendered_field . '</div>';
 		}
 
 		$html .= '</fieldset>';
