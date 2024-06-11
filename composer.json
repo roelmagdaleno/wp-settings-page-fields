@@ -1,7 +1,7 @@
 {
     "name": "roelmagdaleno/wp-settings-page-fields",
     "description": "A package to render form fields in WordPress settings pages.",
-    "version": "0.1.6",
+    "version": "0.1.7",
     "license": "MIT",
     "autoload": {
         "psr-4": {

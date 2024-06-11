@@ -130,7 +130,7 @@ abstract class Element {
 		 */
 		$settings = apply_filters( 'before_returning_settings', $settings, $this->id, $this->option_name );
 
-		if ( empty( $settings ) ) {
+		if ( ! is_array( $settings ) ) {
 			return false;
 		}
 
