@@ -4,6 +4,24 @@ namespace Roel\WP\Settings;
 
 class MultipleFields {
 	/**
+	 * The ID.
+	 *
+	 * @since 0.1.5
+	 *
+	 * @var string $id The ID.
+	 */
+	public string $id;
+
+	/**
+	 * The label.
+	 *
+	 * @since 0.1.5
+	 *
+	 * @var string $label The label.
+	 */
+	public string $label;
+
+	/**
 	 * The fields.
 	 *
 	 * @since 0.1.4
@@ -16,10 +34,15 @@ class MultipleFields {
 	 * Constructor.
 	 *
 	 * @since 0.1.4
+	 * @since 0.1.5 New constructor attributes.
 	 *
+	 * @param string    $id     The ID.
+	 * @param string    $label  The label.
 	 * @param Element[] $fields The fields.
 	 */
-	public function __construct( array $fields ) {
+	public function __construct( string $id, string $label, array $fields ) {
+		$this->id     = $id;
+		$this->label  = $label;
 		$this->fields = $fields;
 	}
 
@@ -60,5 +83,27 @@ class MultipleFields {
 	 */
 	public function print() {
 		echo $this->render();
+	}
+
+	/**
+	 * Get the input id.
+	 *
+	 * @since  0.1.5
+	 *
+	 * @return string   The input id.
+	 */
+	public function id(): string {
+		return $this->id;
+	}
+
+	/**
+	 * Get the label for current element.
+	 *
+	 * @since  0.1.5
+	 *
+	 * @return string   The label for current element.
+	 */
+	public function label(): string {
+		return $this->label;
 	}
 }
